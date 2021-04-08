@@ -2,10 +2,11 @@
   "name": "issue-repro-nextjs-plaiceholder",
   "version": "0.0.1",
   "scripts": {
+    "debug": "npx envinfo --binaries --system",
     "pre-build": "ts-node src/scripts/pre-build.ts",
     "dev": "npm run pre-build && next dev",
     "start": "next start",
-    "build": "npm run pre-build && next build"
+    "build": "npm run debug && npm run pre-build && next build"
   },
   "dependencies": {
     "@plaiceholder/base64": "^1.0.0",
